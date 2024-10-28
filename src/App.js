@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 
@@ -36,6 +35,9 @@ function App() {
           alignItems: 'center',
           gap: '15px'  // Adds consistent spacing between elements
         }}>
+          <div>
+            {accounts.length > 0 ? accounts[0] : 'No accounts found'}
+          </div>
           <input
             type="text"
             value={psbtString}
